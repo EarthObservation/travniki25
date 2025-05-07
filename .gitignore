@@ -162,3 +162,7 @@ cython_debug/
 /time-series-main
 *.zip
 *.gpkg
+02_batch_v2_data_download working.ipynb
+02_batch_v2_data_download_org.ipynb
+/config/signals/sentinel1_coh
+/config/variables/sentinel1_coh
