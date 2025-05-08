@@ -28,5 +28,6 @@
       "data": "eopatches/${var:month_identifier}"
     }
   },
-  "skip_existing": false
+  "skip_existing": false,
+  "workers": 1
 }
