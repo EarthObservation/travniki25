@@ -1,0 +1,32 @@
+{
+  "storage": {
+    "manager": "eogrow.core.storage.StorageManager",
+    "project_folder": "s3://batch-slo-24/",
+    "aws_profile": "eor.data.rw",  // comment this when running on cluster
+    "structure": {
+      "input_data": "input-data",
+      "tiffs": "tiffs/${var:month_identifier}",
+      "data": "eopatches/${var:month_identifier}"
+      // "data_availability": "data-availability/${var:month_identifier}",
+      //"models": "models",
+      //"metadata": "metadata",
+      //"results_rasters": "results/${var:month_identifier}/rasters",
+      //"results_vectors": "results/${var:month_identifier}/vectors",
+      //"results_merged_vectors": "results/${var:month_identifier}/merged-vectors",
+      //"results_postprocessed_vectors": "results/${var:month_identifier}/postprocessed-vectors"
+      
+      // eopatches
+      //"bands": "data/eopatches/bands/res_${var:resolution}m/${var:source}/${var:year}/",
+      //"features": "data/eopatches/features/res_${var:resolution}m/${var:source}/${var:year}/",
+      //"reference": "data/eopatches/reference/res_${var:resolution}m/",
+
+      // dataframes
+      //"reference_df": "data/dataframes/reference/RES=${var:resolution}/",
+      //"timeseries_gerk_seg": "data/dataframes/time-series-gerk-seg/RES=${var:resolution}/SOURCE=${var:source}/YEAR=${var:year}/",
+      //"timeseries_labeled_parcels": "data/dataframes/time-series-labeled-parcels/RES=${var:resolution}/SOURCE=${var:source}/YEAR=${var:year}/",
+      //"timeseries_consistent_meadows_crops": "data/dataframes/time-series-meadows-crops/RES=${var:resolution}/SOURCE=${var:source}/YEAR=${var:year}/",
+      //"timeseries_olive_groves": "data/dataframes/time-series-olive-groves/RES=${var:resolution}/SOURCE=${var:source}/YEAR=${var:year}/",
+      //"timeseries_grazing": "data/dataframes/time-series-grazing/RES=${var:resolution}/SOURCE=${var:source}/YEAR=${var:year}/"
+    }
+  }
+}

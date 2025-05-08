@@ -3,6 +3,6 @@
     "year": 2024,
     "source": "sentinel2-l2a"
   },
-  "**global_settings": "${config_path}/../../global_config_base.json"
-  //"**storage_structure": "${config_path}/../storage_structure_batch.json"
+  "**global_settings": "${config_path}/../../global_config_base.json",
+  "**storage_structure": "${config_path}/../storage_structure.json"
 }
