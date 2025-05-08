@@ -4,40 +4,24 @@
   "input_folder_key": "tiffs",
   "output_folder_key": "data",
   "mapping": [
-    {
-      "batch_files": [
-        "blue.tif",
-        "green.tif",
-        "red.tif",
-        "nir.tif",
-        "alpha.tif"
-      ],
-      "feature": ["data", "BANDS"],
-      "dtype": "uint16"
-    },
-    {
-      "batch_files": [
-        "clear.tif",
-        "snow.tif",
-        "shadow.tif",
-        "haze_light.tif",
-        "haze_heavy.tif",
-        "cloud.tif",
-        "confidence.tif",
-        "udm.tif",
-        "dataMask.tif"
-      ],
-      "feature": ["data", "QA"],
-      "dtype": "uint8"
-    },
-    {
-      "batch_files": ["dataMask.tif"],
-      "feature": ["mask", "IS_DATA"],
-      "dtype": "bool"
-    }
+    {"batch_files": ["B01.tif"], "feature": ["data", "B01"], "multiply_factor": 1e-4, "dtype": "float32"},
+    {"batch_files": ["B02.tif"], "feature": ["data", "B02"], "multiply_factor": 1e-4, "dtype": "float32"},
+    {"batch_files": ["B03.tif"], "feature": ["data", "B03"], "multiply_factor": 1e-4, "dtype": "float32"},
+    {"batch_files": ["B04.tif"], "feature": ["data", "B04"], "multiply_factor": 1e-4, "dtype": "float32"},
+    {"batch_files": ["B05.tif"], "feature": ["data", "B05"], "multiply_factor": 1e-4, "dtype": "float32"},
+    {"batch_files": ["B06.tif"], "feature": ["data", "B06"], "multiply_factor": 1e-4, "dtype": "float32"},
+    {"batch_files": ["B07.tif"], "feature": ["data", "B07"], "multiply_factor": 1e-4, "dtype": "float32"},
+    {"batch_files": ["B08.tif"], "feature": ["data", "B08"], "multiply_factor": 1e-4, "dtype": "float32"},
+    {"batch_files": ["B8A.tif"], "feature": ["data", "B8A"], "multiply_factor": 1e-4, "dtype": "float32"},
+    {"batch_files": ["B09.tif"], "feature": ["data", "B09"], "multiply_factor": 1e-4, "dtype": "float32"},
+    {"batch_files": ["B11.tif"], "feature": ["data", "B11"], "multiply_factor": 1e-4, "dtype": "float32"},
+    {"batch_files": ["B12.tif"], "feature": ["data", "B12"], "multiply_factor": 1e-4, "dtype": "float32"},
+    {"batch_files": ["CLP.tif"], "feature": ["data", "CLP"], "multiply_factor": 0.00392156862745098, "dtype": "float32"},
+    {"batch_files": ["CLM.tif"], "feature": ["mask", "CLM"]},
+    {"batch_files": ["dataMask.tif"], "feature": ["mask", "dataMask"]}
   ],
   "userdata_feature_name": "BATCH_INFO",
-  "userdata_timestamp_reader": "fd.utils.batch.read_timestamps",
+  "userdata_timestamp_reader": "eogrow.utils.batch.read_timestamps_from_orbits",
   "remove_batch_data": false
   //   "worker_resources": "Adjust appropriately for single runs. Overridden in chain-configs."
 }
