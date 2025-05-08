@@ -25,7 +25,7 @@
     "structure": {
       "input_data": "input-data",
       "tiffs": "tiffs/${var:month_identifier}",
-      "data": "eopatches/${var:month_identifier}",
+      "data": "eopatches/${var:month_identifier}"
       //"data_availability": "data-availability/${var:month_identifier}",
       //"models": "models",
       //"metadata": "metadata",
