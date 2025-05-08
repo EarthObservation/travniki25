@@ -22,9 +22,5 @@
   ],
   "userdata_feature_name": "BATCH_INFO",
   "userdata_timestamp_reader": "eogrow.utils.batch.read_timestamps_from_orbits",
-  "remove_batch_data": false,
-  "execution": {
-    "use_ray": false,
-    "workers": 1
-  }
+  "remove_batch_data": false
 }
