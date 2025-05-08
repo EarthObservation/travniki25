@@ -1,0 +1,56 @@
+[
+  {
+    "pipeline_config": {
+      "**batch_to_eopatch": "${config_path}/01_batch_to_eopatch.json",
+      "worker_resources": { "resources": { "GB_RAM": 8 } }
+    },
+    "pipeline_resources": { "resources": { "HEAD_NODE": 1 } }
+  },
+  {
+    "pipeline_config": {
+      "**filtration": "${config_path}/02_filtration.json",
+      "worker_resources": { "resources": { "GB_RAM": 8 } }
+    },
+    "pipeline_resources": { "resources": { "HEAD_NODE": 1 } }
+  },
+  {
+    "pipeline_config": {
+      "**prediction": "${config_path}/03_prediction.json",
+      "worker_resources": { "resources": { "GB_RAM": 32 } }
+    },
+    "pipeline_resources": { "resources": { "HEAD_NODE": 1 } }
+  },
+  {
+    "pipeline_config": {
+      "**postprocessing": "${config_path}/04_postprocessing.json",
+      "worker_resources": { "resources": { "GB_RAM": 16 } }
+    },
+    "pipeline_resources": { "resources": { "HEAD_NODE": 1 } }
+  },
+  {
+    "pipeline_config": {
+      "**vectorization": "${config_path}/05_vectorization.json",
+      "worker_resources": { "resources": { "GB_RAM": 8 } }
+    },
+    "pipeline_resources": { "resources": { "HEAD_NODE": 1 } }
+  },
+  {
+    "pipeline_config": {
+      "**merge_vectors": "${config_path}/06_merge_vectors.json"
+    },
+    "pipeline_resources": { "resources": { "MERGE_WORKER": 1 } }
+  },
+  {
+    "pipeline_config": {
+      "**utm_zone_merging": "${config_path}/07_utm_zone_merging.json"
+    },
+    "pipeline_resources": { "resources": { "MERGE_WORKER": 1 } }
+  },
+  {
+    "pipeline_config": {
+      "**vector_postprocessing": "${config_path}/08_vector_postprocessing.json",
+      "worker_resources": { "resources": { "GB_RAM": 8 } }
+    },
+    "pipeline_resources": { "resources": { "MERGE_WORKER": 1 } }
+  }
+]

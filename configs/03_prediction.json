@@ -1,0 +1,26 @@
+{
+  "pipeline": "fd.pipelines.prediction.PredictionPipeline",
+  "**global_config": "${config_path}/global_config.json",
+  "input_folder_key": "data",
+  "output_folder_key": "data",
+  "model_folder_key": "models",
+  "input_features": [["data", "BANDS"]],
+  "bands_feature": ["data", "BANDS"],
+  "feature_indices": [0, 1, 2, 3],
+  "normalization_factors_file": "metadata/lin-percentiles-1st-99th-nl-nea-pf.csv",
+  "normalize": "linear",
+  "model": {
+    "name": "wi22_pf_x3_weights_wc_3runs_200e_avg",
+    "version": "FDV2",
+    "kind": "nivamodelv2",
+    "n_classes": 2,
+    "n_channels": 4
+  },
+  "extent_feature": ["data", "EXTENT_PREDICTED"],
+  "boundary_feature": ["data", "BOUNDARY_PREDICTED"],
+  "pad_buffer": 0,
+  "crop_buffer": 0,
+  "pytorch_threads": 4,
+  "use_torchscript": true,
+  "skip_existing": false
+}

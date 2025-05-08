@@ -1,0 +1,43 @@
+{
+  "variables": {
+    "month_identifier": "2023-06",
+    "resolution": 3
+  },
+  "area": {
+    "manager": "eogrow.core.area.CustomGridAreaManager",
+    "grid_filename": "scotland_utm_grid_1920x1920.gpkg",
+    "name_column": "identifier"
+  },
+  "logging": {
+    "manager": "eogrow.core.logging.LoggingManager",
+    "save_logs": true,
+    "show_logs": true,
+    "capture_warnings": false,
+    "pipeline_logs_backup_interval": 120,
+    "stdout_log_packages": [
+      "eogrow",
+      "__main__",
+      "root",
+      "sentinelhub.api.batch",
+      "fd"
+    ]
+  },
+  "storage": {
+    "manager": "eogrow.core.storage.StorageManager",
+    "project_folder": "s3://sinergise-fd/fb-scotland-gbsg/project/",
+    "geopandas_backend": "pyogrio",
+    "structure": {
+      "input_data": "input-data",
+      "tiffs": "tiffs/${var:month_identifier}",
+      "data": "eopatches/${var:month_identifier}",
+      "data_availability": "data-availability/${var:month_identifier}",
+      "models": "models",
+      "metadata": "metadata",
+      "results_rasters": "results/${var:month_identifier}/rasters",
+      "results_vectors": "results/${var:month_identifier}/vectors",
+      "results_merged_vectors": "results/${var:month_identifier}/merged-vectors",
+      "results_postprocessed_vectors": "results/${var:month_identifier}/postprocessed-vectors"
+    }
+  },
+  "skip_existing": false
+}

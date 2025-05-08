@@ -1,0 +1,14 @@
+{
+  "pipeline": "fd.pipelines.vector_postprocessing.VectorPostprocessingPipeline",
+  "**global_config": "${config_path}/global_config.json",
+  "input_folder_key": "results_merged_vectors",
+  "input_filename": "utm-merged-results.parquet",
+  "output_folder_key": "results_postprocessed_vectors",
+  "output_filename": "postprocessed_vectors.gpkg",
+  "output_crs": "epsg:4326",
+  "min_area": 50,
+  "buffer_distance": 0.8,
+  "simplify_tolerance": 1,
+  "max_segment_length": 1,
+  "qa_micd_threshold": 10
+}

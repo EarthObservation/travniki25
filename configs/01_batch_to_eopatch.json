@@ -1,0 +1,43 @@
+{
+  "pipeline": "fd.pipelines.batch_to_eopatch.FdBatchToEOPatchPipeline",
+  "**global_config": "${config_path}/global_config.json",
+  "input_folder_key": "tiffs",
+  "output_folder_key": "data",
+  "mapping": [
+    {
+      "batch_files": [
+        "blue.tif",
+        "green.tif",
+        "red.tif",
+        "nir.tif",
+        "alpha.tif"
+      ],
+      "feature": ["data", "BANDS"],
+      "dtype": "uint16"
+    },
+    {
+      "batch_files": [
+        "clear.tif",
+        "snow.tif",
+        "shadow.tif",
+        "haze_light.tif",
+        "haze_heavy.tif",
+        "cloud.tif",
+        "confidence.tif",
+        "udm.tif",
+        "dataMask.tif"
+      ],
+      "feature": ["data", "QA"],
+      "dtype": "uint8"
+    },
+    {
+      "batch_files": ["dataMask.tif"],
+      "feature": ["mask", "IS_DATA"],
+      "dtype": "bool"
+    }
+  ],
+  "userdata_feature_name": "BATCH_INFO",
+  "userdata_timestamp_reader": "fd.utils.batch.read_timestamps",
+  "remove_batch_data": false
+  //   "worker_resources": "Adjust appropriately for single runs. Overridden in chain-configs."
+}
