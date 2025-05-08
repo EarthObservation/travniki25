@@ -26,19 +26,7 @@
       "input_data": "input-data",
       "tiffs": "tiffs/${var:month_identifier}",
       "data": "eopatches/${var:month_identifier}"
-      //"data_availability": "data-availability/${var:month_identifier}",
-      //"models": "models",
-      //"metadata": "metadata",
-      //"results_rasters": "results/${var:month_identifier}/rasters",
-      //"results_vectors": "results/${var:month_identifier}/vectors",
-      //"results_merged_vectors": "results/${var:month_identifier}/merged-vectors",
-      //"results_postprocessed_vectors": "results/${var:month_identifier}/postprocessed-vectors"
     }
-  },
-  "execution": {
-    "manager": "eogrow.core.execution.ExecutionManager",
-    "mode": "single_process",
-    "workers": 1
   },
   "skip_existing": false
 }
