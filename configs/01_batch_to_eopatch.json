@@ -23,5 +23,4 @@
   "userdata_feature_name": "BATCH_INFO",
   "userdata_timestamp_reader": "eogrow.utils.batch.read_timestamps_from_orbits",
   "remove_batch_data": false
-  //   "worker_resources": "Adjust appropriately for single runs. Overridden in chain-configs."
 }
