@@ -1,5 +1,6 @@
 {
   "pipeline": "eogrow.pipelines.batch_to_eopatch.BatchToEOPatchPipeline",
+  "use_ray": false,
   "**global_config": "${config_path}/global_config.json",
   "input_folder_key": "tiffs",
   "output_folder_key": "data",
