@@ -1,6 +1,6 @@
 {
   "variables": {
-    "month_identifier": "2024-06",
+    "year": "2024",
     "resolution": 10
   },
   "area": {
@@ -24,8 +24,8 @@
     "project_folder": "s3://batch-slo-24/",
     "structure": {
       "input_data": "input-data",
-      "tiffs": "tiffs/${var:month_identifier}",
-      "data": "eopatches/${var:month_identifier}"
+      "tiffs": "tiffs/${var:year}",
+      "eopatches": "eopatches/${var:year}"
     }
   },
   "skip_existing": false

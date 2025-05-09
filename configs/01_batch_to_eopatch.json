@@ -2,7 +2,7 @@
   "pipeline": "eogrow.pipelines.batch_to_eopatch.BatchToEOPatchPipeline",
   "**global_config": "${config_path}/global_config.json",
   "input_folder_key": "tiffs",
-  "output_folder_key": "data",
+  "output_folder_key": "eopatches",
   "mapping": [
     {"batch_files": ["B01.tif"], "feature": ["data", "B01"], "multiply_factor": 1e-4, "dtype": "float32"},
     {"batch_files": ["B02.tif"], "feature": ["data", "B02"], "multiply_factor": 1e-4, "dtype": "float32"},
