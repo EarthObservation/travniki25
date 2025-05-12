@@ -1,7 +1,8 @@
 {
   "variables": {
     "year": "2024",
-    "resolution": 10
+    "resolution": 10,
+    "source": "sentinel2_l2a"
   },
   "area": {
     "manager": "eogrow.core.area.CustomGridAreaManager",
@@ -21,11 +22,13 @@
   },
   "storage": {
     "manager": "eogrow.core.storage.StorageManager",
-    "project_folder": "s3://batch-slo-24/",
+    "project_folder": "/media/Obelix/GeoData/slovenia/", //s3://batch-slo-24/",
     "structure": {
       "input_data": "input-data",
       "tiffs": "tiffs/${var:year}",
-      "eopatches": "eopatches/${var:year}"
+      "bands": "data/eopatches/${var:source}/${var:year}/bands/",
+      "features": "$data/eopatches/${var:source}/{var:year}/features/"
+      
     }
   },
   "skip_existing": false

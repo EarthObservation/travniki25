@@ -1,6 +1,6 @@
 {
   "variables": {
-    "month_identifier": "2024-06",
+    "year": "2024",
     "resolution": 10
   },
   "area": {
@@ -20,7 +20,7 @@
     "aws_profile": "eor.data.rw",  // comment this when running on cluster
     "structure": {
       "input_data": "input-data",
-      "tiffs": "tiffs/${var:month_identifier}",
+      "tiffs": "tiffs/${var:year}",
       "data": "eopatches/${var:month_identifier}"
       // "data_availability": "data-availability/${var:month_identifier}",
       //"models": "models",

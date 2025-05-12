@@ -1,9 +1,0 @@
-{
-  "pipeline": "fd.pipelines.vector_merging.MergeVectorsPipeline",
-  "**global_config": "${config_path}/global_config.json",
-  "input_folder_key": "results_vectors",
-  "output_folder_key": "results_merged_vectors",
-  "output_subfolder": "merged-vectors",
-  "absolute_patch_buffer": [60, 60],
-  "raise_missing": true
-}

@@ -1,0 +1,27 @@
+{
+  "pipeline": "eogrow.pipelines.features.FeaturesPipeline",
+  "**global_config": "${config_path}/global_config.json",
+  "input_folder_key": "bands",
+  "bands_feature_name": "BANDS",
+  "output_folder_key": "features",
+  "output_feature_name": "features",
+
+  "data_preparation": { 
+  "valid_data_feature_name": "valid_data"
+  // "cloud_mask_feature_name": null, // Optional
+  // "validity_threshold": null       // Optional
+  },
+
+  "ndis": [
+    ["NDVI", [7, 3]],
+    ["NDVI_RE1", ["7", "4"]],
+    ["NDVI_RE2", ["7", "5"]],
+    ["NDVI_RE3", ["7", "6"]],
+    ["NDVI_GREEN", ["7", "2"]],
+    ["NDTI", ["10", "11"]],
+    ["NDRE1", ["5", "4"]],
+    ["NDWI", ["2", "7"]],
+    ["NDSI", ["2", "10"]]
+  ],
+  "skip_existing": false
+}

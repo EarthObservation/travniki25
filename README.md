@@ -19,3 +19,5 @@ cd travniki25
 ray start --head --num-cpus=2
 eogrow configs/01_batch_to_eopatch.json
 
+then go to jupyterhubeo, open a terminal
+source /opt/tljh/user/bin/activate egrow

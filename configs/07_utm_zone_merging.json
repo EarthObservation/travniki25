@@ -1,9 +1,0 @@
-{
-  "pipeline": "fd.pipelines.utm_zone_merging.UtmMergingPipeline",
-  "**global_config": "${config_path}/global_config.json",
-  "input_folder_key": "results_merged_vectors",
-  "input_subfolder": "merged-vectors",
-  "output_folder_key": "results_merged_vectors",
-  "output_filename": "utm-merged-results.parquet",
-  "h3_resolution": 5
-}
