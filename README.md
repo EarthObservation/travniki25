@@ -21,3 +21,10 @@ eogrow configs/01_batch_to_eopatch.json
 
 then go to jupyterhubeo, open a terminal
 source /opt/tljh/user/bin/activate egrow
+# okolje
+conda create -y -p /opt/tljh/user/envs/eog python=3.10
+sudo -E pip install eo-grow
+source /opt/tljh/user/bin/activate eog
+# skripte
+git clone https://github.com/EarthObservation/travniki25.git
+

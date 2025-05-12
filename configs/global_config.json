@@ -2,7 +2,7 @@
   "variables": {
     "year": "2024",
     "resolution": 10,
-    "source": "sentinel2_l2a"
+    "source": "sentinel_l2a"
   },
   "area": {
     "manager": "eogrow.core.area.CustomGridAreaManager",
