@@ -4,7 +4,7 @@ za shranjevanje je potrebno slediti navodilom https://docs.sentinel-hub.com/api/
 grid je že definiran tako da se lahko potem požene
 02_batch_v2_data_download.ipynb in potem še 03_prepare_for_batch2eopatch.ipynb
 
-# aws setup
+# aws setup, ustvari instanco na AWS EC2, npr. m7i.8xlarge ali manjšo primerno prilagodi cpus=20 sicer manj
 sudo yum install git
 git clone https://github.com/EarthObservation/travniki25.git
 sudo yum install python3-pip
