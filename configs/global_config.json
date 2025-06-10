@@ -1,6 +1,6 @@
 {
   "variables": {
-    "year": "2024",
+    "year": "2022",
     "resolution": 10,
     "source": "sentinel_l2a"
   },
@@ -22,7 +22,7 @@
   },
   "storage": {
     "manager": "eogrow.core.storage.StorageManager",
-    "project_folder": "/media/Obelix/GeoData/slovenia/", //s3://batch-slo-24/",
+    "project_folder": "/media/Obelix/GeoData/slovenia/", //s3://batch-slo/",
     "structure": {
       "input_data": "input-data",
       "tiffs": "tiffs/${var:year}",
